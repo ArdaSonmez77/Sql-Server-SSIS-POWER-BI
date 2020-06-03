@@ -1,0 +1,2545 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/1/2020 9:19:49 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-1TC9LRHO"
+  DTS:CreatorName="LAPTOP-1TC9LRHO\sonme"
+  DTS:DTSID="{D30CED70-3BF4-4B36-85A1-AA7BAF93A759}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.71"
+  DTS:LocaleID="1055"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{7877BF1B-92E9-434E-B49F-0C15CF3B803F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Covid19Datas]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Start to clean dirty datas"
+      DTS:DTSID="{31266844-CFEA-4EE7-8E62-1920117C921C}"
+      DTS:ObjectName="Covid19Datas">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1055"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1254"
+          DTS:ConnectionString="C:\Users\sonme\OneDrive\Masaüstü\BussınessIntelligence_Final_Project\USACovidDatas.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Province_State"
+              DTS:DTSID="{FC8B6487-F8F1-4DA6-A0D3-EFF8657E1496}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country_Region"
+              DTS:DTSID="{20201FAC-A62B-463C-86F1-92ABA3217C9B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last_Update"
+              DTS:DTSID="{3695B0E7-F00C-4683-ACD0-08739633FAD0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lat"
+              DTS:DTSID="{7CC8DCD5-ADCE-46E0-A714-5AC14D1E6C9A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Long_"
+              DTS:DTSID="{6EA5B276-6769-4209-9BB3-BCB70BEB5490}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Confirmed"
+              DTS:DTSID="{C118AD90-3AD5-4467-A25F-74FB1C399C3F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Deaths"
+              DTS:DTSID="{F215F4DA-CA4F-451F-97E3-759A5A432E71}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Recovered"
+              DTS:DTSID="{44F0E3F3-6B71-4EF8-922D-A73BE6B744F1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Active"
+              DTS:DTSID="{C75F90DF-ECA6-4781-8B00-49FBE1AAD974}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FIPS"
+              DTS:DTSID="{FB7695DE-A533-45D3-A94E-3FF9E7395AD7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Incident_Rate"
+              DTS:DTSID="{0DFE75B4-DF5F-48FF-AA69-D31FF37E8824}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="People_Tested"
+              DTS:DTSID="{621C199C-26C8-4F18-A29F-97D856FCDCDA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="People_Hospitalized"
+              DTS:DTSID="{F5AECEBF-F808-48D4-A262-8AAB1054C734}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Mortality_Rate"
+              DTS:DTSID="{DEC1B0F6-E885-4194-AD74-E187580D25AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UID"
+              DTS:DTSID="{46AADEC4-8165-4868-8621-0E0172E8C6B9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ISO3"
+              DTS:DTSID="{3C5860D1-A4F1-460B-9A5E-38B184B35440}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Testing_Rate"
+              DTS:DTSID="{830A929D-4105-41F7-8D95-5CB2875E41D7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hospitalization_Rate"
+              DTS:DTSID="{545B01B9-7D2D-4D78-B86B-FE23FDEA6C7D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-1TC9LRHO\SQLEXPRESS01.Covid19]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0BD1AE5E-A99B-43F5-89D5-BB55D7099A2E}"
+      DTS:ObjectName="LAPTOP-1TC9LRHO\SQLEXPRESS01.Covid19">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-1TC9LRHO\SQLEXPRESS01;Initial Catalog=Covid19;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-1TC9LRHO\SQLEXPRESS01.Covid19 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3749676E-02C3-431C-8370-E59BB5C1AB3B}"
+      DTS:ObjectName="LAPTOP-1TC9LRHO\SQLEXPRESS01.Covid19 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-1TC9LRHO\SQLEXPRESS01;Initial Catalog=Covid19;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MultiCast]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DF687312-2856-445C-AD75-0A196163D69E}"
+      DTS:ObjectName="MultiCast">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1055"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1254"
+          DTS:ConnectionString="C:\Users\sonme\OneDrive\Masaüstü\Sahici\USACovidDatas.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Province_State"
+              DTS:DTSID="{2A5CD030-9E6A-46CD-9D4F-B698ECD78314}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country_Region"
+              DTS:DTSID="{E6D6075E-9A26-4673-ACC1-FD4885CD7E40}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last_Update"
+              DTS:DTSID="{429D4F4E-0A70-4499-8B96-05B24E274522}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lat"
+              DTS:DTSID="{B9ABE55D-7DD8-49DF-884A-089C568FD82B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Long_"
+              DTS:DTSID="{C8A2D709-8921-4D81-A4AB-5866459C3607}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Confirmed"
+              DTS:DTSID="{C18AFD5A-A3DE-4837-A540-4C3FB2DC0147}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Deaths"
+              DTS:DTSID="{56F8EA55-426C-4F93-9E6A-32C7C824DFDE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Recovered"
+              DTS:DTSID="{F00AE0DA-405A-40E7-8297-2FA45BBD10AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Active"
+              DTS:DTSID="{658F81CE-B5CB-4CF0-A7DE-FD06932774C5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FIPS"
+              DTS:DTSID="{4BDB512D-3696-4294-97A9-5F5A1FD46BF0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Incident_Rate"
+              DTS:DTSID="{1F0B1738-5CF0-4822-9858-8B4FB99B3E32}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="People_Tested"
+              DTS:DTSID="{2478F489-9966-407B-B141-0BEAF4018588}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="People_Hospitalized"
+              DTS:DTSID="{0EEC6D69-6F9C-4B4E-8EBA-C055509B9C89}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Mortality_Rate"
+              DTS:DTSID="{7AF2D8F2-E72B-4C8B-810F-5D220CEADE88}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UID"
+              DTS:DTSID="{9CADABB6-771A-42AF-8139-A68F4F4C9596}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ISO3"
+              DTS:DTSID="{47D80862-3DFD-4927-877B-50205792B84B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Testing_Rate"
+              DTS:DTSID="{D653C458-DB73-438F-A04A-D27013495BFD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hospitalization_Rate"
+              DTS:DTSID="{BC1B4EFF-EE45-4190-89EF-1D0F3CF88909}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{0DFC516C-4E69-4F16-B872-8E365120E265}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Clean Datas"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Clean Datas"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Covid19CleanDatasTypes]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1254</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Clean Datas.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-1TC9LRHO\SQLEXPRESS01.Covid19 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-1TC9LRHO\SQLEXPRESS01.Covid19 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[Province_State]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Province_State"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Province_State]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Province_State]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[Country_Region]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Country_Region"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Country_Region]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Country_Region]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[Last_Update]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last_Update"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Last_Update]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Last_Update]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[Lat]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Lat"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Lat]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Lat]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[Long_]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Long_"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Long_]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Long_]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[Confirmed]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Confirmed"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Confirmed]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Confirmed]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[Deaths]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Deaths"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Deaths]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Deaths]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[Recovered]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Recovered"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Recovered]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Recovered]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[Active]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Active"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Active]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[FIPS]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FIPS"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[FIPS]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[FIPS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[Incident_Rate]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Incident_Rate"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Incident_Rate]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Incident_Rate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[People_Tested]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="People_Tested"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[People_Tested]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Tested]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[People_Hospitalized]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="People_Hospitalized"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[People_Hospitalized]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Hospitalized]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[Mortality_Rate]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Mortality_Rate"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Mortality_Rate]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Mortality_Rate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[UID]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UID"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[UID]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[UID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[ISO3]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ISO3"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[ISO3]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ISO3]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[Testing_Rate]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Testing_Rate"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Testing_Rate]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Testing_Rate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].Columns[Hospitalization_Rate]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Hospitalization_Rate"
+                      externalMetadataColumnId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization_Rate]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Hospitalization_Rate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Province_State]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Province_State" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Country_Region]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Country_Region" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Last_Update]"
+                      dataType="dbTimeStamp"
+                      name="Last_Update" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Lat]"
+                      dataType="numeric"
+                      name="Lat"
+                      precision="10"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Long_]"
+                      dataType="numeric"
+                      name="Long_"
+                      precision="10"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Confirmed]"
+                      dataType="i4"
+                      name="Confirmed" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Deaths]"
+                      dataType="i4"
+                      name="Deaths" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Recovered]"
+                      dataType="i4"
+                      name="Recovered" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
+                      dataType="i4"
+                      name="Active" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[FIPS]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="FIPS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Incident_Rate]"
+                      dataType="numeric"
+                      name="Incident_Rate"
+                      precision="10"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[People_Tested]"
+                      dataType="i4"
+                      name="People_Tested" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[People_Hospitalized]"
+                      dataType="i4"
+                      name="People_Hospitalized" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Mortality_Rate]"
+                      dataType="numeric"
+                      name="Mortality_Rate"
+                      precision="10"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[UID]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="UID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[ISO3]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="ISO3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Testing_Rate]"
+                      dataType="numeric"
+                      name="Testing_Rate"
+                      precision="10"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization_Rate]"
+                      dataType="numeric"
+                      name="Hospitalization_Rate"
+                      precision="10"
+                      scale="3" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Clean Datas.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Clean Datas.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Clean Datas.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Clean Datas.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[Lat]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Lat"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Lat]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[Long_]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Long_"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Long_]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[Confirmed]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Confirmed"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Confirmed]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[Deaths]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Deaths"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Deaths]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[Recovered]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Recovered"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Recovered]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[Active]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Active"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Active]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[Last_Update]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last_Update"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Last_Update]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[People_Hospitalized]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="People_Hospitalized"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Hospitalized]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[Incident_Rate]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Incident_Rate"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Incident_Rate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[People_Tested]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="People_Tested"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Tested]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[Mortality_Rate]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Mortality_Rate"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Mortality_Rate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[Testing_Rate]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Testing_Rate"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Testing_Rate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[Hospitalization_Rate]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Hospitalization_Rate"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Hospitalization_Rate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[DatesNull]"
+                  description="Output 3 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="DatesNull"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Hospitalization_Rate]} == "Empty" || #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Testing_Rate]} == "Empty" || #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Mortality_Rate]} == "Empty" || #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Tested]} == "Empty" || #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Incident_Rate]} == "Empty" || #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Hospitalized]} == "Empty" || #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Last_Update]} == "Empty" || #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Active]} == "Empty" || #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Recovered]} == "Empty" || #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Lat]} == "Empty" || #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Long_]} == "Empty" || #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Confirmed]} == "Empty" || #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Deaths]} == "Empty"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Hospitalization_Rate == "Empty" || Testing_Rate == "Empty" || Mortality_Rate == "Empty" || People_Tested == "Empty" || Incident_Rate == "Empty" || People_Hospitalized == "Empty" || Last_Update == "Empty" || Active == "Empty" || Recovered == "Empty" || Lat == "Empty" || Long_ == "Empty" || Confirmed == "Empty" || Deaths == "Empty"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[DatesNotnull]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="DatesNotnull"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Hospitalization_Rate]} != "Empty" &amp;&amp; #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Testing_Rate]} != "Empty" &amp;&amp; #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Mortality_Rate]} != "Empty" &amp;&amp; #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Tested]} != "Empty" &amp;&amp; #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Incident_Rate]} != "Empty" &amp;&amp; #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Hospitalized]} != "Empty" &amp;&amp; #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Last_Update]} != "Empty" &amp;&amp; #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Active]} != "Empty" &amp;&amp; #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Recovered]} != "Empty" &amp;&amp; #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Lat]} != "Empty" &amp;&amp; #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Long_]} != "Empty" &amp;&amp; #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Confirmed]} != "Empty" &amp;&amp; #{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Deaths]} != "Empty"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Hospitalization_Rate != "Empty" &amp;&amp; Testing_Rate != "Empty" &amp;&amp; Mortality_Rate != "Empty" &amp;&amp; People_Tested != "Empty" &amp;&amp; Incident_Rate != "Empty" &amp;&amp; People_Hospitalized != "Empty" &amp;&amp; Last_Update != "Empty" &amp;&amp; Active != "Empty" &amp;&amp; Recovered != "Empty" &amp;&amp; Lat != "Empty" &amp;&amp; Long_ != "Empty" &amp;&amp; Confirmed != "Empty" &amp;&amp; Deaths != "Empty"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[NumDATEScONTROL]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="NumDATEScONTROL"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Lat]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Lat"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Lat]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Lat]},"Empty")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Lat,"Empty")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Long_]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Long_"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Long_]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Long_]},"Empty")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Long_,"Empty")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Confirmed]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Confirmed"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Confirmed]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Confirmed]},"Empty")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Confirmed,"Empty")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Deaths]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Deaths"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Deaths]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Deaths]},"Empty")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Deaths,"Empty")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Recovered]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Recovered"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Recovered]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Recovered]},"Empty")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Recovered,"Empty")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Active]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Active"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Active]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Active]},"Empty")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Active,"Empty")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Last_Update]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last_Update"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Last_Update]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Last_Update]},"Empty")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Last_Update,"Empty")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[People_Hospitalized]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="People_Hospitalized"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Hospitalized]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Hospitalized]},"Empty")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(People_Hospitalized,"Empty")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Incident_Rate]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Incident_Rate"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Incident_Rate]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Incident_Rate]},"Empty")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Incident_Rate,"Empty")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[People_Tested]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="People_Tested"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Tested]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Tested]},"Empty")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(People_Tested,"Empty")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Mortality_Rate]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Mortality_Rate"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Mortality_Rate]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Mortality_Rate]},"Empty")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Mortality_Rate,"Empty")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Testing_Rate]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Testing_Rate"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Testing_Rate]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Testing_Rate]},"Empty")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Testing_Rate,"Empty")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Hospitalization_Rate]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Hospitalization_Rate"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Hospitalization_Rate]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Hospitalization_Rate]},"Empty")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Hospitalization_Rate,"Empty")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1055"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Covid19Datas]"
+                  connectionManagerRefId="Package.ConnectionManagers[Covid19Datas]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Province_State]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Province_State]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Province_State]"
+                      name="Province_State"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Country_Region]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Country_Region]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Country_Region]"
+                      name="Country_Region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Last_Update]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last_Update]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Last_Update]"
+                      name="Last_Update"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Lat]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Lat]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Lat]"
+                      name="Lat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Long_]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Long_]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Long_]"
+                      name="Long_"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Confirmed]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Confirmed]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Confirmed]"
+                      name="Confirmed"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Deaths]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Deaths]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Deaths]"
+                      name="Deaths"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Recovered]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Recovered]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Recovered]"
+                      name="Recovered"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Active]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Active]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Active]"
+                      name="Active"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[FIPS]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FIPS]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[FIPS]"
+                      name="FIPS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Incident_Rate]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Incident_Rate]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Incident_Rate]"
+                      name="Incident_Rate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Tested]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[People_Tested]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Tested]"
+                      name="People_Tested"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Hospitalized]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[People_Hospitalized]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Hospitalized]"
+                      name="People_Hospitalized"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Mortality_Rate]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Mortality_Rate]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Mortality_Rate]"
+                      name="Mortality_Rate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[UID]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UID]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[UID]"
+                      name="UID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ISO3]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ISO3]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ISO3]"
+                      name="ISO3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Testing_Rate]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Testing_Rate]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Testing_Rate]"
+                      name="Testing_Rate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Hospitalization_Rate]"
+                      codePage="1254"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Hospitalization_Rate]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Hospitalization_Rate]"
+                      name="Hospitalization_Rate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Province_State]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Province_State" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Country_Region]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Country_Region" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last_Update]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Last_Update" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Lat]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Lat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Long_]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Long_" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Confirmed]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Confirmed" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Deaths]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Deaths" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Recovered]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Recovered" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Active]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Active" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FIPS]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="FIPS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Incident_Rate]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Incident_Rate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[People_Tested]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="People_Tested" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[People_Hospitalized]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="People_Hospitalized" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Mortality_Rate]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Mortality_Rate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UID]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="UID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ISO3]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="ISO3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Testing_Rate]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Testing_Rate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Hospitalization_Rate]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Hospitalization_Rate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1254"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Null_Datas"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Null_Datas"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Null_Datas]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1254</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Null_Datas.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-1TC9LRHO\SQLEXPRESS01.Covid19 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-1TC9LRHO\SQLEXPRESS01.Covid19 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[Province_State]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Province_State"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Province_State]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Province_State]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[Country_Region]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Country_Region"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Country_Region]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Country_Region]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[Last_Update]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last_Update"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Last_Update]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Last_Update]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[Lat]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Lat"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Lat]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Lat]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[Long_]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Long_"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Long_]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Long_]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[Confirmed]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Confirmed"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Confirmed]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Confirmed]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[Deaths]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Deaths"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Deaths]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Deaths]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[Recovered]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Recovered"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Recovered]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Recovered]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[Active]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Active"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Active]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[FIPS]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FIPS"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[FIPS]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[FIPS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[Incident_Rate]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Incident_Rate"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Incident_Rate]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Incident_Rate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[People_Tested]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="People_Tested"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[People_Tested]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Tested]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[People_Hospitalized]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="People_Hospitalized"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[People_Hospitalized]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[People_Hospitalized]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[Mortality_Rate]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Mortality_Rate"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Mortality_Rate]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Mortality_Rate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[UID]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UID"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[UID]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[UID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[ISO3]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ISO3"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[ISO3]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ISO3]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[Testing_Rate]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Testing_Rate"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Testing_Rate]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Testing_Rate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].Columns[Hospitalization_Rate]"
+                      cachedCodepage="1254"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Hospitalization_Rate"
+                      externalMetadataColumnId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization_Rate]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Hospitalization_Rate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Province_State]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Province_State" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Country_Region]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Country_Region" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Last_Update]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Last_Update" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Lat]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Lat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Long_]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Long_" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Confirmed]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Confirmed" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Deaths]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Deaths" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Recovered]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Recovered" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Active" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[FIPS]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="FIPS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Incident_Rate]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Incident_Rate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[People_Tested]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="People_Tested" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[People_Hospitalized]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="People_Hospitalized" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Mortality_Rate]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Mortality_Rate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[UID]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="UID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[ISO3]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="ISO3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Testing_Rate]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Testing_Rate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input].ExternalColumns[Hospitalization_Rate]"
+                      codePage="1254"
+                      dataType="str"
+                      length="50"
+                      name="Hospitalization_Rate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Null_Datas.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Null_Datas.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Null_Datas.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Null_Datas.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[DatesNotnull]"
+              endId="Package\Data Flow Task\Clean Datas.Inputs[OLE DB Destination Input]"
+              name="DatesNotnull"
+              startId="Package\Data Flow Task\Conditional Split.Outputs[DatesNotnull]" />
+            <path
+              refId="Package\Data Flow Task.Paths[DatesNull]"
+              endId="Package\Data Flow Task\Null_Datas.Inputs[OLE DB Destination Input]"
+              name="DatesNull"
+              startId="Package\Data Flow Task\Conditional Split.Outputs[DatesNull]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{DEC0DF53-25D4-4350-9315-4152E60C0055}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0BD1AE5E-A99B-43F5-89D5-BB55D7099A2E}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Covid19CleanDatasTypes;&#xA;TRUNCATE TABLE dbo.Null_Datas;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{4C6F86E4-5CF5-427C-AC81-E9BDD4741013}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="173.333326445686,64.480000512441" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="271.333322551516,212.85333502494" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="255.733326445686,106.080000512441">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="90.79999610583,106.773334512499"
+              Start="0,0"
+              End="90.79999610583,99.2733345124987">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.3866672562493" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,49.3866672562493"
+                    Point2="0,53.3866672562493"
+                    Point3="4,53.3866672562493" />
+                  <mssgle:LineSegment
+                    End="86.79999610583,53.3866672562493" />
+                  <mssgle:CubicBezierSegment
+                    Point1="86.79999610583,53.3866672562493"
+                    Point2="90.79999610583,53.3866672562493"
+                    Point3="90.79999610583,57.3866672562493" />
+                  <mssgle:LineSegment
+                    End="90.79999610583,99.2733345124987" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="416.499985833963,147.146667041355" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Data Flow Task\Flat File Source"
+          TopLeft="60,60" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Data Flow Task\Null_Datas"
+          TopLeft="533.333314524757,346.653335293558" />
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\Data Flow Task\Conditional Split"
+          TopLeft="167.833329048422,194.466667417421" />
+        <NodeLayout
+          Size="135.2,41.6"
+          Id="Package\Data Flow Task\Clean Datas"
+          TopLeft="241.333326127794,366.586668785308" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="135.6,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="357.299985833964,45.5466670413547"
+              Start="0,0"
+              End="357.299985833964,38.0466670413547">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.7733335206774" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.7733335206774"
+                    Point2="0,22.7733335206774"
+                    Point3="4,22.7733335206774" />
+                  <mssgle:LineSegment
+                    End="353.299985833964,22.7733335206774" />
+                  <mssgle:CubicBezierSegment
+                    Point1="353.299985833964,22.7733335206774"
+                    Point2="357.299985833964,22.7733335206774"
+                    Point3="357.299985833964,26.7733335206774" />
+                  <mssgle:LineSegment
+                    End="357.299985833964,38.0466670413547" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="416.499985833963,167.946667041355">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-95.0666567855411,47.320000376066"
+              Start="0,0"
+              End="-87.5666567855411,47.320000376066">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-43.5333283927705,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-43.5333283927705,0"
+                    Point2="-47.5333283927705,0"
+                    Point3="-47.5333283927705,4" />
+                  <mssgle:LineSegment
+                    End="-47.5333283927705,43.320000376066" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-47.5333283927705,43.320000376066"
+                    Point2="-47.5333283927705,47.320000376066"
+                    Point3="-51.5333283927705,47.320000376066" />
+                  <mssgle:LineSegment
+                    End="-87.5666567855411,47.320000376066" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[DatesNull]"
+          TopLeft="268.899995715089,236.066667417421">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="329.233318809669,110.586667876137"
+              Start="0,0"
+              End="329.233318809669,103.086667876137">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.9187083950495" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.9187083950495"
+                    Point2="0,44.9187083950495"
+                    Point3="4,44.9187083950495" />
+                  <mssgle:LineSegment
+                    End="325.233318809669,44.9187083950495" />
+                  <mssgle:CubicBezierSegment
+                    Point1="325.233318809669,44.9187083950495"
+                    Point2="329.233318809669,44.9187083950495"
+                    Point3="329.233318809669,48.9187083950495" />
+                  <mssgle:LineSegment
+                    End="329.233318809669,103.086667876137" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="143.369530498584,49.9187083950495,42.4942578125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[DatesNotnull]"
+          TopLeft="244.633329048422,236.066667417421">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="64.2999970793724,130.520001367887"
+              Start="0,0"
+              End="64.2999970793724,123.020001367887">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.2600006839434" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,61.2600006839434"
+                    Point2="0,65.2600006839434"
+                    Point3="4,65.2600006839434" />
+                  <mssgle:LineSegment
+                    End="60.2999970793724,65.2600006839434" />
+                  <mssgle:CubicBezierSegment
+                    Point1="60.2999970793724,65.2600006839434"
+                    Point2="64.2999970793724,65.2600006839434"
+                    Point3="64.2999970793724,69.2600006839434" />
+                  <mssgle:LineSegment
+                    End="64.2999970793724,123.020001367887" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="3.72786963343618,70.2600006839434,56.8442578125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
